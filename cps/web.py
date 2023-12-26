@@ -136,7 +136,9 @@ def viewer_required(f):
 
 
 # ################################### data provider functions #########################################################
-
+@web.route("/health")
+def health_check():
+    return {"message": "Ready"}
 
 @web.route("/ajax/emailstat")
 @login_required
